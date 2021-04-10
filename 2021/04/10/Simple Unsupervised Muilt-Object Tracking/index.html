@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>Deep Network Flows for Tracking - Hexo</title>
+  <title>Simple Unsupervised Muilt-Object Tracking - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="Deep Network Flows for Tracking">
+            <span class="h2" id="subtitle" title="Simple Unsupervised Muilt-Object Tracking">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-01-19 22:27" pubdate>
-        January 19, 2021 pm
+      <time datetime="2021-04-10 20:44" pubdate>
+        April 10, 2021 pm
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      86 字
+      128 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      2
        分钟
     </span>
   
@@ -224,18 +224,20 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Deep Network Flows for Tracking</h1>
+            <h1 style="display: none">Simple Unsupervised Muilt-Object Tracking</h1>
             
             <div class="markdown-body">
-              <p>Before talking about the model, we first should formulate the problem well. Here the authors follow the network flow formulation from Zhang et al. [<a target="_blank" rel="noopener" href="http://vision.cse.psu.edu/courses/Tracking/vlpr12/lzhang_cvpr08global.pdf]">http://vision.cse.psu.edu/courses/Tracking/vlpr12/lzhang_cvpr08global.pdf]</a></p>
-<h2 id="3-1-Network-Flow-Formulation"><a href="#3-1-Network-Flow-Formulation" class="headerlink" title="3.1 Network Flow Formulation"></a>3.1 Network Flow Formulation</h2><p><img src="2021-01-19T225325.png" srcset="/img/loading.gif" alt="2021-01-19T225325"></p>
-<ul>
-<li>d<sub>i</sub>: detection, two nodes connect by a red edge, corresponding variables: bbox b(d), probability p(d), frame t(d)</li>
+              <p>Abstract:</p>
+<ol>
+<li>Given unlabeled videos, our proposed method (SimpleReID) first generates tracking labels using SORT [3] and trains a ReID network to predict the generated la- bels using crossentropy loss.</li>
+<li>By incorporating our unsupervised SimpleReID with CenterTrack trained on augmented still images, we establish a new state-of-the-art performance on popular datasets like MOT16/17 without using tracking supervision, beating current best (CenterTrack) by 0.2-0.3 MOTA and 4.4-4.8 IDF1 scores.</li>
+</ol>
+<p>Introduction:</p>
+<ol>
+<li>Multi-object trackers broadly consist of two key components: (i) A spatio-temporal <strong>association</strong> model which associates boxes in <em>nearby</em> frames to create clusters of tracklets, and (ii) A <strong>re-identification</strong> model which associates tracklets over <em>larger</em> windows to deal with complexities in tracking such as occlusions and target interactions.</li>
 <li></li>
-</ul>
-<p><img src="2021-01-25T002205.png" srcset="/img/loading.gif" alt="2021-01-25T002205"></p>
-<h1 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h1><h2 id="how-to-define-gradients-explicitly-in-Pytorch"><a href="#how-to-define-gradients-explicitly-in-Pytorch" class="headerlink" title="how to define gradients explicitly in Pytorch?"></a>how to define gradients explicitly in Pytorch?</h2><h2 id="how-to-get-a-null-space-of-one-matrix"><a href="#how-to-get-a-null-space-of-one-matrix" class="headerlink" title="how to get a null space of one matrix?"></a>how to get a null space of one matrix?</h2><p><a target="_blank" rel="noopener" href="https://discuss.pytorch.org/t/nullspace-of-a-tensor/69980/4">https://discuss.pytorch.org/t/nullspace-of-a-tensor/69980/4</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+</ol>
+
             </div>
             <hr>
             <div>
@@ -247,9 +249,9 @@
                     
                       <a class="hover-with-bg" href="/tags/MOT/">MOT</a>
                     
-                      <a class="hover-with-bg" href="/tags/Graph/">Graph</a>
-                    
                       <a class="hover-with-bg" href="/tags/Online-Learning/">Online Learning</a>
+                    
+                      <a class="hover-with-bg" href="/tags/Unsupervised-Learning/">Unsupervised Learning</a>
                     
                   </div>
                 
@@ -262,18 +264,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2021/01/24/Deep%20SORT/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Deep SORT</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2021/01/19/hello-world/">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2021/01/24/Deep%20SORT/">
+                        <span class="hidden-mobile">Deep SORT</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
