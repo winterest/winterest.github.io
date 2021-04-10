@@ -4,13 +4,44 @@
   
   
   <entry>
+    <title>Deep SORT</title>
+    <link href="/2021/01/24/Deep%20SORT/"/>
+    <url>/2021/01/24/Deep%20SORT/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Paper-Review"><a href="#Paper-Review" class="headerlink" title="Paper Review"></a>Paper Review</h1><p>Deep SORT (Simple Online and Realtime Tracking) becomes a popular benchmark for MOT problem since it’s simplicity for both understanding and implementation. SORT, father of DeepSORT, is really a simple idea that only takes the pixel location information to make tracklets, while DeepSORT takes a further step, which integrates the appearance information. The benefits are the abilities handling long periods of occlusions, reducing ID switches. </p><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Tracking-by-detection has become the leading paradigm in MOT:<br>Current popular frameworks include <strong>1. flow network formulations and 2. probabilistic graphical models</strong>. They are all batch processing methods. More traditional methods: Multiple Hypothesis Tracking; Joint Probabilistic Data Association Filter, are on a frame-by-frame basis. They all have increased computa- tional and implementation complexity.</p><p><strong>SORT</strong>:<br>performs Kalman filtering in image space and frame-by-frame data association using the Hungarian method with an association metric that measures bounding box overlap.<br><strong>drawbach</strong>: relatively high number of identity switches</p><p>We overcome this issue by re- placing the association metric with a more informed metric that <strong>combines motion and appearance information</strong>.</p><h2 id="SORT-WITH-DEEP-ASSOCIATION-METRIC"><a href="#SORT-WITH-DEEP-ASSOCIATION-METRIC" class="headerlink" title="SORT WITH DEEP ASSOCIATION METRIC"></a>SORT WITH DEEP ASSOCIATION METRIC</h2><h1 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h1><h2 id="system-settings"><a href="#system-settings" class="headerlink" title="system settings:"></a>system settings:</h2><p>win10+python3.7.9+pytorch1.7.1</p><p>matplotlib, opencv, scikit-image, numba</p><h2 id="code"><a href="#code" class="headerlink" title="code:"></a>code:</h2><ol><li>SORT: <a href="https://github.com/cfotache/pytorch_objectdetecttrack">https://github.com/cfotache/pytorch_objectdetecttrack</a></li><li>Deep SORT: </li></ol><h2 id="data"><a href="#data" class="headerlink" title="data:"></a>data:</h2><p>following the <a href="https://github.com/Zhongdao/Towards-Realtime-MOT/blob/master/DATASET_ZOO.md">‘towards realtime MOT’</a>, we use these data sets:</p><ol><li>MOT16 </li><li>MOT17<br>and data set from Kaggle NFL impact detection.</li></ol>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>MOT</tag>
+      
+      <tag>Online Learning</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Deep Network Flows for Tracking</title>
     <link href="/2021/01/19/Deep-Network-Flows-for-Tracking/"/>
     <url>/2021/01/19/Deep-Network-Flows-for-Tracking/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<p>Before talking about the model, we first should formulate the problem well. Here the authors follow the network flow formulation from Zhang et al. [<a href="http://vision.cse.psu.edu/courses/Tracking/vlpr12/lzhang_cvpr08global.pdf]">http://vision.cse.psu.edu/courses/Tracking/vlpr12/lzhang_cvpr08global.pdf]</a></p><h2 id="3-1-Network-Flow-Formulation"><a href="#3-1-Network-Flow-Formulation" class="headerlink" title="3.1 Network Flow Formulation"></a>3.1 Network Flow Formulation</h2><p><img src="2021-01-19T225325.png" alt="2021-01-19T225325"></p><ul><li>d<sub>i</sub>: detection, two nodes connect by a red edge, corresponding variables: bbox b(d), probability p(d), frame t(d)</li><li></li></ul><p><img src="2021-01-25T002205.png" alt="2021-01-25T002205"></p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>MOT</tag>
+      
+      <tag>Graph</tag>
+      
+      <tag>Online Learning</tag>
+      
+    </tags>
     
   </entry>
   
